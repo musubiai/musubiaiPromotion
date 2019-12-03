@@ -39,7 +39,7 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
 .description{
     p:first-child{
         @extend .mask;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-weight: 600;
         letter-spacing: .2rem;
         line-height: 2;
@@ -63,7 +63,7 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
         font-size: 1.3rem;
         font-weight: 600;
         letter-spacing: .1rem;
-        line-height: 1.8;
+        line-height: 2;
     }
 }
 .startCont{
@@ -121,7 +121,7 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
         color: #fff;
         font-size: 1.3rem;
         font-weight: 700;
-        letter-spacing: .2rem;
+        letter-spacing: .15rem;
         line-height: 2;
         position: relative;
         z-index: 2;
@@ -264,18 +264,18 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
                     }
                 }
                 img{
-                    width: 70%;
+                    width: 90%;
                     margin: 0 auto;
-                    animation: lens 10s linear infinite;
+                    animation: lens 20s linear infinite;
                     @keyframes lens {
                         0% {
-                            transform: translateY(-10%) rotate(0);
+                            transform: translateY(-5%) rotate(0);
                         }
                         50%{
-                            transform: translateY(10%) rotate(10deg);
+                            transform: translateY(10%) rotate(20deg);
                         }
                         100%{
-                            transform: translateY(-10%) rotate(0);
+                            transform: translateY(-5%) rotate(0);
                         }
                     }
                 }
@@ -359,12 +359,14 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
         #allFinish_01{
             >p{
                 color: #ff0000;
-                font-size: 4rem;
+                font-size: 4.5rem;
                 font-weight: 700;
                 letter-spacing: .7rem;
                 line-height: 1.2;
+                margin-top: -15%;
+                margin-left: 2%;
                 span{
-                    font-size: 3rem;
+                    font-size: 3.5rem;
                 }
             }
         }
