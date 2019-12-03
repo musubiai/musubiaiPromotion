@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>musubiai2.0 Promotion Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="red">
+    <meta name="apple-mobile-web-app-title" content="musubiai2.0">
+    <link rel="apple-touch-icon" href="./musubiai_icon.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="./musubiai_icon.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="./musubiai_icon.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="./musubiai_icon.png" sizes="144x144">
+    <link rel="icon" sizes="192x192" href="musubiai_icon.png">
+    <link rel="manifest" href="./manifest.json">
+
+    <link rel="stylesheet" href="https://use.typekit.net/csc1gvk.css"><!-- futuraPT -->
+    <script type="text/javascript" src="./js/source-han-serif.js"></script><!-- 源ノ角ゴシック -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css"><!-- リセット用css-->
+    <link rel="stylesheet" type="text/css" href="./css/allStyle.css"><!-- 全適用css -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/logoSvg.css">
+    <link rel="stylesheet" type="text/css" href="./css/animation.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <script type="text/javascript" src="./js/jquery-2.0.2.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.inview.min.js"></script>
+
+    <script>
+        // service workerが有効なら、service-worker.js を登録します
+    //     if ('serviceWorker' in navigator) {
+    //       navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
+    //    }
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            //SVG読み込み
+            $('h1').load('svg.html');
+            //グラデーション読み込み
+            $('.area').load('gradation.html');
+            //フッター読み込み
+            $('footer').load('footer.html');
+
+            //始めにメインコンテンツを消してアニメーションだけを出す
+            $("#mainCont").css("display","none");
+            // その後にアニメーションを消して
+            setTimeout(function() {
+                $('#firstAnimation').fadeOut();
+            }, 4000);
+            // メインコンテンツを出す
+            setTimeout(function() {
+                $('#mainCont').fadeIn();
+            }, 4700);
+
+            $('.inview').css({"opacity":0});
+            $('.inview').on('inview', function(event, isInView) {
+                if (isInView) {
+                    $(this).css({"opacity":1});
+                    $(this).addClass('animated');
+                    $(this).addClass('fadeInUp');
+                } 
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- firstAnimation -->
+        <div id="firstAnimation">
+            <h1></h1>
+            <h2><img src="./img/copy.svg"></h2>
+        </div>
+        <!-- firstAnimation -->
+
+        <!-- mainCont -->
+        <div id="mainCont" class="container">
+
+            <!-- firstdescription -->
+            <div id="firstDescription" class="child description">
+                <p class="inview">
+                    <span>musubiai <span>2.0</span></span> は<br>
+                    異世界<span class="ruby">（バーチャル）</span>空間で<br>
+                    AIと共に、あなたに合った<br>
+                    最高の相手と結び合う<br>
+                    ことができます。
+                </p>
+                <footer></footer>
+                <div class="area"></div>
+            </div>
+            <!-- firstdescription -->
+
+            <!-- seconddescription -->
+            <div id="secondDescription" class="child description">
+                <p class="inview">
+                    日々の生活や行動から、<br>
+                    あなたのAIを作ります。
+                </p>
+                <footer></footer>
+                <div class="area"></div>
+            </div>
+            <!-- secondescription -->
+
+            <!-- thirdescription -->
+            <div id="thirdDescription" class="child description">
+                <p class="inview">
+                    そして、異世界空間で<br>
+                    あなたと相手のAIは<br>
+                    出会います。
+                </p>
+                <footer></footer>
+                <div class="area"></div>
+            </div>
+            <!-- thirddescription -->
+
+            <!-- twoDevice -->
+            <div id="twoDevice" class="child startCont">                
+                <h3 class="inview">
+                    <span>ふたつのデバイス</span>
+                    AIによってできる、<br>もう一人のあなた。
+                </h3>
+                <p><span>#</span>01</p>
+                <footer></footer>
+            </div>
+            <!-- twoDevice -->
+
+            <!-- smartRing -->
+            <div id="smartRing" class="child">
+                <div id="smartRingInner" class="inview">
+                    <h4 class="name">musubiai RING</h4>
+                    <img src="./img/ring.png" alt="リング画像">
+                </div>                
+                <footer></footer>
+                <div class="area"></div>
+            </div>
+            <!-- smartRing -->
+
+            <!-- smartRingDescription -->
+            <div id="smartRingDescription" class="child text">
+                <p class="inview">
+                    音声と位置情報を取得します。<br>
+                    音声からは話し方や言動を。<br>
+                    位置情報からはあなたの行動パターンを解析します。
+                </p>
+                <img src="./img/ring.png" alt="リング画像">
+                <footer></footer>
+                <div class="area"></div>
+            </div>
+            <!-- smartRingDescription -->
+
+            <!-- lens -->
+            <div id="lens" class="child">
+                <div id="lensInner" class="inview">
+                    <h4 class="name">SMART LENS</h4>
+                    <img src="./img/lens80.png" alt="レンズ画像">
+                </div>                
+                <footer></footer>
+                <div class="area"></div>
+            </div>
+            <!-- lens -->
+
+            <!-- lensDescription -->
+            <div id="lensDescription" class="child text">
+                <p class="inview">
+                    視覚情報を取得し、生体認証を行います。
+                    見たものをAIが判別し、
+                    あなたの様々な情報を解析します。
+                </p>
+                <img src="./img/lens80.png" alt="レンズ画像">
+                <footer></footer>
+                <div class="area"></div>
+            </div>
+            <!-- smartRingDescription -->
+
+            <!-- twoDeviceFnish -->
+            <div id="twoDeviceFnish" class="child finish">
+                <p class="inview">
+                    こうして作られたあなたのAIは、あなたが日常生活をしている間にも異世界空間であなたに変わって他のユーザーとデートしています。
+                </p>
+                <footer></footer>
+                <div class="area"></div>
+            </div>
+            <!-- twoDeviceFinish -->
+
+            <!-- fullDive -->
+            <div id="fullDive" class="child startCont">
+                <h3 class="inview">
+                    <span>フルダイブ</span>
+                    新しいデート場所は、<br>異世界空間。
+                </h3>
+                <p><span>#</span>02</p>
+                <footer></footer>
+            </div>
+            <!-- fullDive -->
+
+            <!-- fullDiveDescription -->
+            <div id="fullDiveDescription" class="child text">
+                <p class="inview">
+                    フルダイブとは、異世界空間内に五感を接続してその世界に入り込むことを指します。操作する人は異世界間内のもう一人の自分と一体化し、自分の体と同じように 意識そのもので動くことができます。
+                </p>
+                <div class="area"></div>
+                <footer></footer>
+            </div>
+            <!-- fullDiveDescription -->
+
+            <!-- fullDiveFinish -->
+            <div id="fullDiveFinish" class="child finish">
+                <p class="inview">
+                    異世界空間へのフルダイブ用ゴーグルはバンド部分に付いている７つの電極が脳波を読み取り、異世界へ意識を繋げ、あなたをもう一つの世界へと連れて行きます。
+                </p>
+                <div class="area"></div>
+                <footer></footer>
+            </div>
+            <!-- fullDiveFinish -->
+
+            <!-- musubiai -->
+            <div id="musubiai" class="child startCont">
+                <h3 class="inview">
+                    <span>サポートAI</span>
+                    あなたの縁結び、<br>サポートします。
+                </h3>
+                <p><span>#</span>03</p>
+                <footer></footer>
+            </div>
+            <!-- musubiai -->
+
+            <!-- musubiaiDescription -->
+            <div id="musubiaiDescription" class="child">
+                <div id="musubiaiDescription" class="inview">
+                    <p><span>サポートAI</span>結 アイ</p>
+                    <img class="ai" src="./img/ai.png" alt="アイちゃん">
+                </div>
+
+                <div class="area"></div>
+                <footer></footer>
+            </div>
+            <!-- musubiaiDescription -->
+
+            <!-- musubiaiFinish -->
+            <div id="musubiaiFinish" class="child finish">
+                <p class="inview">
+                    アイちゃんは、musubiai RINGの中と異世界空間に現れます。デートする相手を決める時、デートをしている時など、様々な場面でアイちゃんがサポートしてくれます。全ては、あなたが良い人と結ばれるためです。
+                </p>
+                <div class="area"></div>
+                <footer></footer>
+            </div>
+            <!-- musubiaiFInish -->
+
+            <!-- allFinish_01 -->
+            <div id="allFinish_01" class="child">
+                <p class="inview">
+                    <span>2020</span><br>
+                    1.11
+                </p>
+                <footer></footer>
+            </div>
+            <!-- musubiaiFInish_01 -->
+
+            <!-- allFinish_02 -->
+            <div id="allFinish_02" class="child">
+                <p class="inview"><span>musubiai <span>2.0</span></span> で<br>新たな出会いを<br>始めましょう</p>
+                <footer></footer>
+            </div>
+            <!-- musubiaiFInish_02 -->
+
+            <!-- allFinish_03 -->
+            <div id="allFinish_03" class="child">
+                <div id="allFinish_03Inner" class="inview">
+                    <p>musubiai MAP</p>
+                    <img src="./img/map.svg" alt="会場地図">
+                </div>
+
+                <!-- <div class="area"></div> -->
+                <footer></footer>
+            </div>
+            <!-- musubiaiFInish_03 -->
+
+
+        </div><!-- mainCont -->        
+    </div><!-- wrapper -->
+    <script src="./app.js"></script>
+</body>
+</html>
