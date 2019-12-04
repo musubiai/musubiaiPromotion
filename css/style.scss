@@ -359,14 +359,77 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
         #allFinish_01{
             >p{
                 color: #ff0000;
-                font-size: 4.5rem;
-                font-weight: 700;
-                letter-spacing: .7rem;
-                line-height: 1.2;
-                margin-top: -10%;
-                margin-left: 2%;
-                span{
-                    font-size: 3.5rem;
+                .place{
+                    display: block;
+                    font-size: 1.4rem;
+                    letter-spacing: .09rem;
+                    margin-bottom: 5%;
+                    margin-top: -10%;
+                    span{
+                        font-size: 1.2rem;
+                        display: block;
+                        margin-bottom: 2%;
+                    }
+                }
+                .yearDate{
+                    font-weight: 700;
+                    letter-spacing: 1rem;
+                    line-height: 1;
+                    span{
+                        margin-left: 6%;
+                    }
+                    .year{
+                        font-size: 3.8rem;
+                    }
+                    .date{
+                        font-size: 4.8rem;
+                    }
+                }
+            }
+            #heart{
+                position: relative;
+                width: 100px;
+                height: 90px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,0);
+                animation: heartDown 5s infinite;
+                @keyframes heartDown{
+                    0% {
+                        opacity: 0;
+                    }
+                    20%{
+                        opacity: 1;
+                        transform: rotate(5deg);
+                    }
+
+                    100% {
+                        top: 20%;
+                        transform: scale(10);
+                        opacity: 0;
+                    }
+                }
+                &:before,
+                &:after{
+                    position: absolute;
+                    content: "";
+                    left: 50px;
+                    top: 0;
+                    width: 50px;
+                    height: 80px;
+                    background: linear-gradient(95deg, #ee0979, #ff6a00);
+                    border-radius: 50px 50px 0 0;
+                    transform: rotate(-45deg);
+                    transform-origin: 0 100%;
+                }
+                &:before{
+                    background:#ee0979;
+                }
+                &:after{
+                    left: 0;
+                    transform: rotate(45deg);
+                    transform-origin :100% 100%;
                 }
             }
         }
@@ -398,7 +461,7 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
                         transform: translate(-50%,-20%) rotate(-45deg);
                         width: 2.4rem;
                         height: 2.4rem;
-                        border-left: .1rem solid #ff0000;
+                        border-left: .1rem solid #f00000;
                         border-bottom: .1rem solid #ff0000;
                         animation: sdb 3s infinite;
                         opacity: 0;
