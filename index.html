@@ -44,16 +44,16 @@
             //フッター読み込み
             $('footer').load('footer.html');
 
-            // //始めにメインコンテンツを消してアニメーションだけを出す
-            // $("#mainCont").css("display","none");
-            // // その後にアニメーションを消して
-            // setTimeout(function() {
-            //     $('#firstAnimation').fadeOut();
-            // }, 4000);
-            // // メインコンテンツを出す
-            // setTimeout(function() {
-            //     $('#mainCont').fadeIn();
-            // }, 4700);
+            //始めにメインコンテンツを消してアニメーションだけを出す
+            $("#mainCont").css("display","none");
+            // その後にアニメーションを消して
+            setTimeout(function() {
+                $('#firstAnimation').fadeOut();
+            }, 4000);
+            // メインコンテンツを出す
+            setTimeout(function() {
+                $('#mainCont').fadeIn();
+            }, 4700);
 
             $('.inview').css({"opacity":0});
             $('.inview').on('inview', function(event, isInView) {
@@ -73,10 +73,10 @@
     <div id="wrapper">
 
         <!-- firstAnimation -->
-        <!-- <div id="firstAnimation">
+        <div id="firstAnimation">
             <h1></h1>
             <h2><img src="./img/copy.svg"></h2>
-        </div> -->
+        </div>
         <!-- firstAnimation -->
 
         <!-- mainCont -->
