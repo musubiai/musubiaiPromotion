@@ -44,16 +44,16 @@
             //フッター読み込み
             $('footer').load('footer.html');
 
-            //始めにメインコンテンツを消してアニメーションだけを出す
-            $("#mainCont").css("display","none");
-            // その後にアニメーションを消して
-            setTimeout(function() {
-                $('#firstAnimation').fadeOut();
-            }, 4000);
-            // メインコンテンツを出す
-            setTimeout(function() {
-                $('#mainCont').fadeIn();
-            }, 4700);
+            // //始めにメインコンテンツを消してアニメーションだけを出す
+            // $("#mainCont").css("display","none");
+            // // その後にアニメーションを消して
+            // setTimeout(function() {
+            //     $('#firstAnimation').fadeOut();
+            // }, 4000);
+            // // メインコンテンツを出す
+            // setTimeout(function() {
+            //     $('#mainCont').fadeIn();
+            // }, 4700);
 
             $('.inview').css({"opacity":0});
             $('.inview').on('inview', function(event, isInView) {
@@ -72,10 +72,10 @@
     <div id="wrapper">
 
         <!-- firstAnimation -->
-        <div id="firstAnimation">
+        <!-- <div id="firstAnimation">
             <h1></h1>
             <h2><img src="./img/copy.svg"></h2>
-        </div>
+        </div> -->
         <!-- firstAnimation -->
 
         <!-- mainCont -->
@@ -269,7 +269,10 @@
 
             <!-- allFinish_02 -->
             <div id="allFinish_02" class="child">
-                <p class="inview"><span>musubiai <span>2.0</span></span> で<br>新たな出会いを<br>始めましょう</p>
+                <div id="allFinish_02Inner">
+                    <p class="inview"><span>musubiai <span>2.0</span></span> で<br>新たな出会いを<br>始めましょう</p>
+                    <a href="#"><span></span><span></span><span></span></a>
+                </div>
                 <footer></footer>
             </div>
             <!-- musubiaiFInish_02 -->
@@ -279,9 +282,23 @@
                 <div id="allFinish_03Inner" class="inview">
                     <p>musubiai MAP</p>
                     <img src="./img/map.svg" alt="会場地図">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
-
-                <!-- <div class="area"></div> -->
                 <footer></footer>
             </div>
             <!-- musubiaiFInish_03 -->

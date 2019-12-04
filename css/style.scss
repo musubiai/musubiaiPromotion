@@ -363,7 +363,7 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
                 font-weight: 700;
                 letter-spacing: .7rem;
                 line-height: 1.2;
-                margin-top: -15%;
+                margin-top: -10%;
                 margin-left: 2%;
                 span{
                     font-size: 3.5rem;
@@ -374,18 +374,57 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
 
         /*---------- allFinish_02 ----------*/
         #allFinish_02{
-            >p{
-                color: #ff0000;
-                font-weight: 500;
-                font-size: 2.2rem;
-                letter-spacing: .6rem;
-                line-height: 2;
-                span{
-                    letter-spacing: .2rem;
-                    font-weight: 700;
+            #allFinish_02Inner{
+                p{
+                    color: #ff0000;
+                    font-weight: 500;
+                    font-size: 2.2rem;
+                    letter-spacing: .6rem;
+                    line-height: 2;
                     span{
-                        font-size: 1.6rem;
-                        letter-spacing: 0;
+                        letter-spacing: .2rem;
+                        font-weight: 700;
+                        span{
+                            font-size: 1.6rem;
+                            letter-spacing: 0;
+                        }
+                    }
+                }
+                a{
+                    span{
+                        position: absolute;
+                        bottom: 17%;
+                        left: 50%;
+                        transform: translate(-50%,-20%) rotate(-45deg);
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        border-left: .1rem solid #ff0000;
+                        border-bottom: .1rem solid #ff0000;
+                        animation: sdb 3s infinite;
+                        opacity: 0;
+                        box-sizing: border-box;
+                        &:nth-of-type(1){
+                            animation-delay: 0s;
+                        }
+                        &:nth-of-type(2){
+                            bottom: 20%;
+                            animation-delay: .15s;
+                        }
+                        &:nth-of-type(3) {
+                            bottom: 23%;
+                            animation-delay: .3s;
+                        }
+                        @keyframes sdb {
+                            0%{
+                                opacity: 0;
+                            }
+                            50% {
+                                opacity: 1;
+                            }
+                            100% {
+                                opacity: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -406,8 +445,94 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
                 img{
                     width: 100%;
                 }
+                ul{
+                    li{
+                        list-style-type: none;
+                        position: relative;
+                        width: 1rem;
+                        height: 1rem;
+                        position: absolute;
+                        top: 61%;
+                        left: 64%;
+                        transform: translate(-64%,-61%);
+                        animation: heart 15s infinite;
+                        opacity: .5;
+                        &:nth-child(1){
+                            animation-delay: 0;
+                            opacity: 1;
+                        }
+                        &:nth-child(2){
+                            animation-delay: 1s;
+                        }
+                        &:nth-child(3){
+                            animation-delay: 1.5s;
+                        }
+                        &:nth-child(4){
+                            animation-delay: 2.5s;
+                        }
+                        &:nth-child(5){
+                            animation-delay: 3s;
+                        }
+                        &:nth-child(6){
+                            animation-delay: 3.5s;
+                        }
+                        &:nth-child(7){
+                            animation-delay: 4.2s;
+                        }
+                        &:nth-child(8){
+                            animation-delay: 4.8s;
+                        }
+                        &:nth-child(9){
+                            animation-delay: 5.5s;
+                        }
+                        &:nth-child(10){
+                            animation-delay: 6.4s;
+                        }
+                        &:nth-child(11){
+                            animation-delay: 7s;
+                        }
+                        &:nth-child(12){
+                            animation-delay: 8s;
+                        }
+                        &:nth-child(13){
+                            animation-delay: 10s;
+                        }
+                        @keyframes heart{
+                            0%{
+                                top: 61%;
+                                transform: rotate(0deg);
+                                opacity: 0;
+                            }
+                            100%{
+                                top: -20%;
+                                transform: rotate(720deg);
+                                opacity: 1;
+                            }
+                        }
+                        &:before,
+                        &:after{
+                            position: absolute;
+                            content: "";
+                            left: .26rem;
+                            top: 0;
+                            width: .3rem;
+                            height: .5rem;
+                            background: linear-gradient(95deg, rgba(238,9,9,1), rgba(255,106,106,1));
+                            border-radius: 5rem 5rem 0 0;
+                            transform: rotate(-45deg);
+                            transform-origin: 0 100%;
+                        }
+                        &:before{
+                            background:rgba(238,9,9,1);
+                        }
+                        &:after{
+                            left: 0;
+                            transform: rotate(45deg);
+                            transform-origin :100% 100%;
+                        }
+                    }
+                }
             }
-
         }
         /*---------- allFinish_03 ----------*/
 
