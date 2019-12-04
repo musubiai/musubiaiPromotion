@@ -386,27 +386,33 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
                     }
                 }
             }
-            #heart{
+            .heartDown{
                 position: relative;
-                width: 100px;
-                height: 90px;
+                width: 80px;
+                height: 70px;
                 position: absolute;
                 top: 0;
                 left: 50%;
                 transform: translate(-50%,0);
-                animation: heartDown 5s infinite;
+                animation: heartDown 8s forwards;
+                z-index: -1;
                 @keyframes heartDown{
                     0% {
                         opacity: 0;
                     }
                     20%{
-                        opacity: 1;
-                        transform: rotate(5deg);
+                        transform: translate(-50%,-50%) rotate(-10deg) scale(.9);
                     }
-
+                    40%{
+                        opacity: 1;
+                        transform: translate(-50%,-50%) rotate(10deg) scale(1);
+                    }
+                    80%{
+                        transform:  translate(-50%,-50%) rotate(20deg) scale(.9);
+                    }
                     100% {
-                        top: 20%;
-                        transform: scale(10);
+                        top: 50%;
+                        transform: translate(-50%,-50%) rotate(0deg) scale(100);
                         opacity: 0;
                     }
                 }
