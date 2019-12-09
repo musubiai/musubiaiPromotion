@@ -584,7 +584,7 @@
 
 #wrapper #mainCont #allFinish_02 #allFinish_02Inner p {
   color: #ff0000;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 2.2rem;
   letter-spacing: .6rem;
   line-height: 2;
@@ -664,10 +664,14 @@
 
 #wrapper #mainCont #allFinish_03 #allFinish_03Inner p {
   color: #ff0000;
-  font-size: 2.8rem;
-  font-weight: 500;
+  font-size: 2.6rem;
+  font-weight: 5s00;
   letter-spacing: .2rem;
   margin-bottom: 7%;
+}
+
+#wrapper #mainCont #allFinish_03 #allFinish_03Inner p span {
+  font-weight: 600;
 }
 
 #wrapper #mainCont #allFinish_03 #allFinish_03Inner img {
