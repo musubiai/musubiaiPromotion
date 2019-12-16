@@ -296,6 +296,43 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
         }
         /*---------- lensDescription ----------*/
 
+
+        /*---------- twoDeviceFnish ----------*/
+        #twoDeviceFnish{
+            position: relative;
+            #twoDeviceFinishInner{
+                img{
+                    position: absolute;
+                }
+                .bike{
+                    width: 60%;
+                    bottom: 10%;
+                    right: -10%;
+                    animation: bike 10s ease-in forwards;
+                    @keyframes bike {
+                        0%{
+                            right: -40%;
+                            bottom: 8%;
+                        }
+                        20%{
+                            bottom: 13%
+                        }
+                        60%{
+                            bottom: 12%;
+                        }
+                        80%{
+                            bottom: 8%
+                        }
+                        100%{
+                            bottom: 10%;
+                            right: 120%;
+                        }
+                    }
+                }
+            }
+        }
+        /*---------- twoDeviceFnish ----------*/
+
         /*---------- fullDive ----------*/
         #fullDive{
 
@@ -304,19 +341,41 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
 
         /*---------- fullDiveDescription ----------*/
         #fullDiveDescription{
-
+            position: relative;
+            #fullDiveDescriptionInner{
+                .vr{
+                    width: 40%;
+                    position: absolute;
+                    bottom: 12%;
+                    right: 7%;
+                    transform: translate(-7%,-12%);
+                    animation: vr 3s forwards;
+                    animation-delay: 1s;
+                    @keyframes vr{
+                        0%{
+                            opacity: 1;
+                            transform: translate(-7%,-12%) scale(0);
+                        }
+                        100%{
+                            opacity: 1;
+                            transform: translate(-7%,-12%) scale(1);
+                        }
+                    }
+                }
+            }
         }
         /*---------- fullDiveDescription ----------*/
 
         /*---------- fullDiveFinish ----------*/
         #fullDiveFinish{
-
+            position: relative;
+            #fullDiveFinishInner{
+            }
         }
         /*---------- fullDiveFinish ----------*/
 
         /*---------- musubiai ----------*/
         #musubiai{
-
         }
         /*---------- musubiai ----------*/
 
@@ -354,6 +413,38 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
             }
         }
         /*---------- musubiaiDescription ----------*/
+
+
+        /*---------- musubiaiFinish ----------*/
+        #musubiaiFinish{
+            position: relative;
+            #musubiaiFinishInner{
+                .love{
+                    width: 100%;
+                    position: absolute;
+                    bottom: 5%;
+                    left: 50%;
+                    transform: translate(-50%,-5%);
+                    animation: love 2s forwards;
+                    animation-delay: 2s;
+                    @keyframes love {
+                        0%{
+                            opacity: 0;
+                        }
+                        40%{
+                            opacity: .5;
+                        }
+                        80%{
+                            opacity: .8;
+                        }
+                        100%{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        /*---------- musubiaiFinish ----------*/
 
         /*---------- allFinish_01 ----------*/
         #allFinish_01{

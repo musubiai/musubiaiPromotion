@@ -44,16 +44,16 @@
             //フッター読み込み
             $('footer').load('footer.html');
 
-            //始めにメインコンテンツを消してアニメーションだけを出す
-            $("#mainCont").css("display","none");
-            // その後にアニメーションを消して
-            setTimeout(function() {
-                $('#firstAnimation').fadeOut();
-            }, 4000);
-            // メインコンテンツを出す
-            setTimeout(function() {
-                $('#mainCont').fadeIn();
-            }, 4700);
+            // //始めにメインコンテンツを消してアニメーションだけを出す
+            // $("#mainCont").css("display","none");
+            // // その後にアニメーションを消して
+            // setTimeout(function() {
+            //     $('#firstAnimation').fadeOut();
+            // }, 4000);
+            // // メインコンテンツを出す
+            // setTimeout(function() {
+            //     $('#mainCont').fadeIn();
+            // }, 4700);
 
             $('.inview').css({"opacity":0});
             $('.inview').on('inview', function(event, isInView) {
@@ -64,6 +64,22 @@
                     $(this).addClass('heartDown');
                 } 
             });
+
+            $('.bike').css({"opacity":0});
+            $('#twoDeviceFnish').on('inview', function(event, isInView) {
+                $('#twoDeviceFinishInner img').addClass('bike');
+            });
+
+            $('#fullDiveDescriptionInner img').css({"opacity":0});
+            $('#fullDiveDescription').on('inview', function(event, isInView) {
+                $('#fullDiveDescriptionInner img').addClass('vr');
+            });
+
+            $('#musubiaiFinishInner img').css({"opacity":0});
+            $('#musubiaiFinish').on('inview', function(event, isInView) {
+                $('#musubiaiFinishInner img').addClass('love');
+            });
+
         });
     </script>
 
@@ -73,10 +89,10 @@
     <div id="wrapper">
 
         <!-- firstAnimation -->
-        <div id="firstAnimation">
+        <!-- <div id="firstAnimation">
             <h1></h1>
             <h2><img src="./img/copy.svg"></h2>
-        </div>
+        </div> -->
         <!-- firstAnimation -->
 
         <!-- mainCont -->
@@ -140,7 +156,7 @@
             <div id="smartRingDescription" class="child text">
                 <p class="inview">
                     音声と位置情報を取得します。<br>
-                    音声からは話し方や言動を。<br>
+                    音声からは、話し方や言動を。<br>
                     位置情報からはあなたの<br>
                     行動パターンを解析します。
                 </p>
@@ -162,8 +178,8 @@
             <!-- lensDescription -->
             <div id="lensDescription" class="child text">
                 <p class="inview">
-                    視覚情報を取得し、<br>
-                    生体認証を行います。<br>
+                    SMART LENSから視覚情報を<br>
+                    取得し、生体認証を行います。<br>
                     あなたが見たものをAIが判別し、<br>
                     あなたの様々な情報を解析します。
                 </p>
@@ -173,14 +189,17 @@
             <!-- smartRingDescription -->
 
             <!-- twoDeviceFnish -->
-            <div id="twoDeviceFnish" class="child finish">
-                <p class="inview">
-                    こうして作られたあなたのAIは、<br>
-                    あなたが日常生活を送っている<br>
-                    間にも異世界空間であなたに<br>
-                    変わって他のユーザーと<br>
-                    デートしています。
-                </p>
+            <div id="twoDeviceFnish" class="child">
+                <div id="twoDeviceFinishInner" class="text">
+                    <p class="inview">
+                        あなたのAIは、あなたが<br>
+                        日常生活を送っている間に<br>
+                        あなたに変わり相手のAIと<br>
+                        異世界空間でデートしています。
+                    </p>
+                    <img src="./img/bike.svg" alt="デート画像">
+                </div>
+
                 <div class="area"></div>
             </div>
             <!-- twoDeviceFinish -->
@@ -197,18 +216,28 @@
 
             <!-- fullDiveDescription -->
             <div id="fullDiveDescription" class="child text">
-                <p class="inview">
-                    フルダイブとは、異世界空間内に五感を接続してその世界に入り込むことを指します。操作する人は異世界にいるもう一人の自分と一体化し、自分の体と同じように 意識そのもので動くことができます。
-                </p>
+                <div id="fullDiveDescriptionInner" class="text">
+                    <p class="inview">
+                        フルダイブは、異世界にいる<br>
+                        もう一人の自分と一体化し、<br>
+                        意識的に動くことができます。
+                    </p>
+                    <img src="./img/vr.svg" alt="VRの人">
+                </div>
                 <div class="area"></div>
             </div>
             <!-- fullDiveDescription -->
 
             <!-- fullDiveFinish -->
-            <div id="fullDiveFinish" class="child finish">
-                <p class="inview">
-                    異世界空間へのフルダイブ用ゴーグルはバンド部分に付いている７つの電極が脳波を読み取り、異世界へ意識を繋げ、あなたをもう一つの世界へと連れて行きます。
-                </p>
+            <div id="fullDiveFinish" class="child">
+                <div id="fullDiveFinishInner" class="text">
+                    <p class="inview">
+                        フルダイブ用ゴーグルが<br>
+                        異世界へと意識を繋げ、<br>
+                        もう一つの世界へと<br>
+                        あなたを連れて行きます。
+                    </p>
+                </div>
                 <div class="area"></div>
             </div>
             <!-- fullDiveFinish -->
@@ -234,10 +263,16 @@
             <!-- musubiaiDescription -->
 
             <!-- musubiaiFinish -->
-            <div id="musubiaiFinish" class="child finish">
-                <p class="inview">
-                    アイちゃんは、デートする相手を決める時、デートをしている時など、様々な場面でアイちゃんがサポートしてくれます。全ては、あなたが良い人と結ばれるためです。
-                </p>
+            <div id="musubiaiFinish" class="child">
+                <div id="musubiaiFinishInner" class="text">
+                    <p class="inview">
+                        アイちゃんは、様々な場面で<br>
+                        あなたを、サポートします。<br>
+                        全ては、あなたが最高の人と<br>
+                        結ばれるためにです。
+                    </p>
+                    <img src="./img/love.svg" alt="">
+                </div>
                 <div class="area"></div>
             </div>
             <!-- musubiaiFInish -->
