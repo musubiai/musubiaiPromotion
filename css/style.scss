@@ -192,6 +192,32 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
             height: 100vh;
         }
 
+        /*---------- secondDescription ----------*/
+        #secondDescription{
+            position: relative;
+            #secondDescriptionInner{
+                .aiDate{
+                    position: absolute;
+                    bottom: 5%;
+                    left: 50%;
+                    transform: translate(-50%,-5%);
+                    animation: aiDate 2s forwards;
+                    animation-delay: 1s;
+                    @keyframes aiDate{
+                        0%{
+                            opacity: 1;
+                            transform: translate(-50%,-5%) scale(0);
+                        }
+                        100%{
+                            opacity: 1;
+                            transform: translate(-50%,-5%) scale(.5);
+                        }
+                    }
+                }
+            }
+
+        }/*---------- secondDescription ----------*/
+
 
         /*---------- twoDevice ----------*/
         #twoDevice{
@@ -308,11 +334,15 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
                     width: 60%;
                     bottom: 10%;
                     right: -10%;
-                    animation: bike 10s ease-in forwards;
+                    animation: bike 10s ease-in infinite;
                     @keyframes bike {
                         0%{
-                            right: -40%;
+                            opacity: 0;
+                            right: -30%;
                             bottom: 8%;
+                        }
+                        5%{
+                            opacity: 1;
                         }
                         20%{
                             bottom: 13%
@@ -321,7 +351,7 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
                             bottom: 12%;
                         }
                         80%{
-                            bottom: 8%
+                            bottom: 15%
                         }
                         100%{
                             bottom: 10%;
@@ -343,25 +373,6 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
         #fullDiveDescription{
             position: relative;
             #fullDiveDescriptionInner{
-                .vr{
-                    width: 40%;
-                    position: absolute;
-                    bottom: 12%;
-                    right: 7%;
-                    transform: translate(-7%,-12%);
-                    animation: vr 3s forwards;
-                    animation-delay: 1s;
-                    @keyframes vr{
-                        0%{
-                            opacity: 1;
-                            transform: translate(-7%,-12%) scale(0);
-                        }
-                        100%{
-                            opacity: 1;
-                            transform: translate(-7%,-12%) scale(1);
-                        }
-                    }
-                }
             }
         }
         /*---------- fullDiveDescription ----------*/
@@ -370,6 +381,46 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
         #fullDiveFinish{
             position: relative;
             #fullDiveFinishInner{
+                .city01,
+                .city02{
+                    position: absolute;
+                    animation: fadeInUp 2.5s forwards, fuwafuwa 5s ease-in-out infinite;
+                }
+                .city01{
+                    width: 50%;
+                    top: 10%;
+                    left: 10%;
+                    transform: translate(-10%,-10%);
+                    animation-delay: 1s;
+                }
+                .city02{
+                    width: 50%;
+                    bottom: 15%;
+                    right: 5%;
+                    transform: translate(5%,-15%);
+                    animation-delay: 1.5s;
+                }
+                @keyframes fadeInUp{
+                    0%{
+                        opacity: 0;
+                        top: 10%;
+                    }
+                    100%{
+                        opacity: 1;
+                        top: 8%;
+                    }
+                }
+                @keyframes fuwafuwa {
+                    0% {
+                        transform: translateY(-5%);
+                    }
+                    50%{
+                        transform: translateY(5%);
+                    }
+                    100%{
+                        transform: translateY(-5%);
+                    }
+                }
             }
         }
         /*---------- fullDiveFinish ----------*/
@@ -485,7 +536,7 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
                 top: 0;
                 left: 50%;
                 transform: translate(-50%,0);
-                animation: heartDown 8s forwards;
+                animation: heartDown 5s forwards;
                 z-index: -1;
                 @keyframes heartDown{
                     0% {

@@ -234,6 +234,8 @@
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   height: 100vh;
+  /*---------- secondDescription ----------*/
+  /*---------- secondDescription ----------*/
   /*---------- twoDevice ----------*/
   /*---------- twoDevice ----------*/
   /*---------- smartRing ----------*/
@@ -271,6 +273,48 @@
   padding: 4%;
   scroll-snap-align: start;
   height: 100vh;
+}
+
+#wrapper #mainCont #secondDescription {
+  position: relative;
+}
+
+#wrapper #mainCont #secondDescription #secondDescriptionInner .aiDate {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -5%);
+          transform: translate(-50%, -5%);
+  -webkit-animation: aiDate 2s forwards;
+          animation: aiDate 2s forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes aiDate {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -5%) scale(0);
+            transform: translate(-50%, -5%) scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -5%) scale(0.5);
+            transform: translate(-50%, -5%) scale(0.5);
+  }
+}
+
+@keyframes aiDate {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -5%) scale(0);
+            transform: translate(-50%, -5%) scale(0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -5%) scale(0.5);
+            transform: translate(-50%, -5%) scale(0.5);
+  }
 }
 
 #wrapper #mainCont #smartRing #smartRingInner h4:before {
@@ -419,14 +463,18 @@
   width: 60%;
   bottom: 10%;
   right: -10%;
-  -webkit-animation: bike 10s ease-in forwards;
-          animation: bike 10s ease-in forwards;
+  -webkit-animation: bike 10s ease-in infinite;
+          animation: bike 10s ease-in infinite;
 }
 
 @-webkit-keyframes bike {
   0% {
-    right: -40%;
+    opacity: 0;
+    right: -30%;
     bottom: 8%;
+  }
+  5% {
+    opacity: 1;
   }
   20% {
     bottom: 13%;
@@ -435,7 +483,7 @@
     bottom: 12%;
   }
   80% {
-    bottom: 8%;
+    bottom: 15%;
   }
   100% {
     bottom: 10%;
@@ -445,8 +493,12 @@
 
 @keyframes bike {
   0% {
-    right: -40%;
+    opacity: 0;
+    right: -30%;
     bottom: 8%;
+  }
+  5% {
+    opacity: 1;
   }
   20% {
     bottom: 13%;
@@ -455,7 +507,7 @@
     bottom: 12%;
   }
   80% {
-    bottom: 8%;
+    bottom: 15%;
   }
   100% {
     bottom: 10%;
@@ -467,47 +519,87 @@
   position: relative;
 }
 
-#wrapper #mainCont #fullDiveDescription #fullDiveDescriptionInner .vr {
-  width: 40%;
+#wrapper #mainCont #fullDiveFinish {
+  position: relative;
+}
+
+#wrapper #mainCont #fullDiveFinish #fullDiveFinishInner .city01,
+#wrapper #mainCont #fullDiveFinish #fullDiveFinishInner .city02 {
   position: absolute;
-  bottom: 12%;
-  right: 7%;
-  -webkit-transform: translate(-7%, -12%);
-          transform: translate(-7%, -12%);
-  -webkit-animation: vr 3s forwards;
-          animation: vr 3s forwards;
+  -webkit-animation: fadeInUp 2.5s forwards, fuwafuwa 5s ease-in-out infinite;
+          animation: fadeInUp 2.5s forwards, fuwafuwa 5s ease-in-out infinite;
+}
+
+#wrapper #mainCont #fullDiveFinish #fullDiveFinishInner .city01 {
+  width: 50%;
+  top: 10%;
+  left: 10%;
+  -webkit-transform: translate(-10%, -10%);
+          transform: translate(-10%, -10%);
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-@-webkit-keyframes vr {
+#wrapper #mainCont #fullDiveFinish #fullDiveFinishInner .city02 {
+  width: 50%;
+  bottom: 15%;
+  right: 5%;
+  -webkit-transform: translate(5%, -15%);
+          transform: translate(5%, -15%);
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes fadeInUp {
   0% {
-    opacity: 1;
-    -webkit-transform: translate(-7%, -12%) scale(0);
-            transform: translate(-7%, -12%) scale(0);
+    opacity: 0;
+    top: 10%;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(-7%, -12%) scale(1);
-            transform: translate(-7%, -12%) scale(1);
+    top: 8%;
   }
 }
 
-@keyframes vr {
+@keyframes fadeInUp {
   0% {
-    opacity: 1;
-    -webkit-transform: translate(-7%, -12%) scale(0);
-            transform: translate(-7%, -12%) scale(0);
+    opacity: 0;
+    top: 10%;
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(-7%, -12%) scale(1);
-            transform: translate(-7%, -12%) scale(1);
+    top: 8%;
   }
 }
 
-#wrapper #mainCont #fullDiveFinish {
-  position: relative;
+@-webkit-keyframes fuwafuwa {
+  0% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  50% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+}
+
+@keyframes fuwafuwa {
+  0% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  50% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
 }
 
 #wrapper #mainCont #musubiaiDescription > p {
@@ -654,8 +746,8 @@
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  -webkit-animation: heartDown 8s forwards;
-          animation: heartDown 8s forwards;
+  -webkit-animation: heartDown 5s forwards;
+          animation: heartDown 5s forwards;
   z-index: -1;
 }
 
