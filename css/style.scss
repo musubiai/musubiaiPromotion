@@ -499,6 +499,7 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
 
         /*---------- allFinish_01 ----------*/
         #allFinish_01{
+            overflow: hidden;
             >p{
                 color: #ff0000;
                 .place{

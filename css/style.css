@@ -701,6 +701,10 @@
   }
 }
 
+#wrapper #mainCont #allFinish_01 {
+  overflow: hidden;
+}
+
 #wrapper #mainCont #allFinish_01 > p {
   color: #ff0000;
 }
