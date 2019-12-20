@@ -904,6 +904,10 @@
   }
 }
 
+#wrapper #mainCont #allFinish_03 {
+  overflow-x: hidden;
+}
+
 #wrapper #mainCont #allFinish_03 #allFinish_03Inner {
   width: 100%;
 }

@@ -644,6 +644,7 @@ $linear-gradient-back: linear-gradient(200deg, rgba(250, 143, 191,1),rgba(138, 1
 
         /*---------- allFinish_03 ----------*/
         #allFinish_03{
+            overflow-x: hidden;
             #allFinish_03Inner{
                 width: 100%;
                 p{
